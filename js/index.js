@@ -3,9 +3,16 @@ var dx = 3;
 var dy = -3;
 var x = 140;
 var y = 140;
-var paddle = document.getElementById("paddle");
-var board = document.getElementById("gameboard");
-var paddleWidth = paddle.offsetWidth;
+let paddle; 
+let board;
+let paddleWidth;
+
+const init = () => {
+    paddle = document.getElementById("paddle");
+    board = document.getElementById("gameboard");
+    paddleWidth = paddle.offsetWidth;
+}
+
 function movePaddle(event) {
     const key = event.key;
     if (key === "ArrowLeft") {
@@ -22,7 +29,7 @@ function movePaddle(event) {
   }
   
 document.addEventListener("keydown", movePaddle);
-
+init();
 setInterval(moveBall, 15);
 
 function moveBall() {
