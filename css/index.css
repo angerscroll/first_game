@@ -13,3 +13,12 @@
     top: 140px;
     left: 140px;
   }
+  #paddle {
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 10px;
+    width: 100px;
+    height: 10px;
+    background-color: blue;
+  }
+  
